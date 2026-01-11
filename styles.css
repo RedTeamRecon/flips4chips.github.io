@@ -17,17 +17,61 @@ header h1 {
    margin: 0;
 }
 a {
-   display: inline-block;
-   text-decoration: none;
-   color: #2c3e50;
-   padding: 10px 15px;
-   font-weight: bold;
-   transition: all 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+    color: #2c3e50;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-a:hover {
-   background-color: #3498db;
-   color: white;
-   border-radius: 4px;
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin: 20px 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    /* Smooth transition for the transform property */
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+section:hover {
+    transform: scale(1.02);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid #2c3e50;
+}
+
+caption {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+thead {
+    background-color: #3498db;
+    color: white;
+}
+
+tfoot {
+    font-style: italic;
+    background-color: #f0f2f5;
+}
+
+img {
+    border-radius: 4px;
+    max-width: 100px;
 }
 article, aside {
    background-color: white;
