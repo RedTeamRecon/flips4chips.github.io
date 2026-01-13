@@ -2,14 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <meta name="description" content="Welcome to my personal homepage featuring my profile, projects, and contact information.">
     <meta name="keywords" content="Portfolio, Web Development, About Me, Projects, Contact">
     <meta name="author" content="David Nelson">
     
     <title>My Homepage</title>
+
+    <style>
+        /* Flexbox for Navigational Menu */
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            padding: 0;
+        }
+
+        /* Flexbox for Main Content Area */
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            padding: 20px;
+        }
+
+        /* Flexbox for Contact Form */
+        #contact-form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            gap: 15px;
+        }
+
+        /* Optional styling for better layout */
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 <body>
 
@@ -32,43 +62,72 @@
             <p>Welcome! My name is David Nelson and I am a passionate creator dedicated to building efficient and beautiful web experiences. This section provides a brief look into my background and skills.</p>
         </section>
 
-       <section id="projects">
-    <h2>My Projects</h2>
-    <p>Here you will find a collection of my latest work.</p>
+        <section id="projects">
+            <h2>My Projects</h2>
+            <p>Here you will find a collection of my latest work.</p>
 
-    <table>
-        <caption>Comparison of Recent Web Projects</caption>
-        <colgroup>
-            <col style="background-color: #f9f9f9;"> <col>                                  <col style="background-color: #f9f9f9;"> </colgroup>
-        <thead>
-            <tr>
-                <th>Project Name</th>
-                <th>Description</th>
-                <th>Preview</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Eco-Tracker App</td>
-                <td>A sustainability app built to track daily carbon footprints using real-time data APIs.</td>
-                <td><img src="https://via.placeholder.com/150" alt="Eco-Tracker Thumbnail"></td>
-            </tr>
-            <tr>
-                <td>Portfolio Alpha</td>
-                <td>A high-performance personal site focused on accessibility and clean typography.</td>
-                <td><img src="https://via.placeholder.com/150" alt="Portfolio Thumbnail"></td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="3">More projects available upon request.</td>
-            </tr>
-        </tfoot>
-    </table>
-</section>
+            <table border="1">
+                <caption>Comparison of Recent Web Projects</caption>
+                <colgroup>
+                    <col style="background-color: #f9f9f9;"> 
+                    <col> 
+                    <col style="background-color: #f9f9f9;"> 
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Description</th>
+                        <th>Preview</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Eco-Tracker App</td>
+                        <td>A sustainability app built to track daily carbon footprints using real-time data APIs.</td>
+                        <td><img src="https://via.placeholder.com/150" alt="Eco-Tracker Thumbnail"></td>
+                    </tr>
+                    <tr>
+                        <td>Portfolio Alpha</td>
+                        <td>A high-performance personal site focused on accessibility and clean typography.</td>
+                        <td><img src="https://via.placeholder.com/150" alt="Portfolio Thumbnail"></td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">More projects available upon request.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
         <section id="contact">
             <h2>Contact Me</h2>
             <p>If you would like to get in touch, feel free to reach out via email or social media. I am always open to new opportunities and collaborations.</p>
+            
+            
+            <form id="contact-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="sender_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email_address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5"></textarea>
+                </div>
+
+                <input type="submit" value="Send Message">
+            </form>
         </section>
 
     </main>
