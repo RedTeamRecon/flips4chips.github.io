@@ -36,3 +36,5 @@ To run this project locally, follow these steps:
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/your-repo-name.git
+
+<img width="3286" height="1080" alt="image" src="https://github.com/user-attachments/assets/abd58a66-1731-48cb-a8b7-e490954f2d46" />
